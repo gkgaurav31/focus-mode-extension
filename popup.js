@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function addSite(site) {
-    if (site) {
+    if (site && isValidURL(site)) {
       chrome.storage.sync.get(["allowedSites"], function (data) {
         const allowedSites = data.allowedSites || [];
         if (!allowedSites.includes(site)) {
@@ -36,6 +36,22 @@ document.addEventListener("DOMContentLoaded", () => {
           siteInput.value = "";
         }
       });
+    } else {
+      alert(
+        "Please enter a valid URL or domain (e.g., https://example.com or example.com)"
+      );
+    }
+  }
+
+  function isValidURL(site) {
+    try {
+      // Attempt to create a new URL object. This will throw an error for invalid URLs.
+      new URL(site);
+      return true;
+    } catch (e) {
+      // If the URL is invalid, check if it's a valid domain name.
+      const domainPattern = /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      return domainPattern.test(site);
     }
   }
 
