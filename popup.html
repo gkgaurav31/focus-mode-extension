@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Focus Mode</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 5px 10px;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Focus Mode</h1>
+    <label> <input type="checkbox" id="focusMode" /> Enable Focus Mode </label>
+    <h3>Allowed Sites</h3>
+    <input type="text" id="siteInput" placeholder="https://example.com" />
+    <button id="addSiteButton">Add Site</button>
+    <ul id="allowedSitesList"></ul>
+    <script src="popup.js"></script>
+  </body>
+</html>

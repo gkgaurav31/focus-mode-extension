@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Mode</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+      .container {
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 600px;
+        width: 100%;
+      }
+      h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      p {
+        color: #666;
+        font-size: 16px;
+        margin: 0;
+      }
+      .button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Focus Mode Enabled</h1>
+      <p>
+        You've activated Focus Mode, which restricts access to certain websites.
+        To access this site, you can disable Focus Mode or add this site to the
+        allowed list.
+      </p>
+      <button class="button" id="manageSitesButton">
+        Manage Allowed Sites
+      </button>
+    </div>
+    <script src="block.js"></script>
+  </body>
+</html>
