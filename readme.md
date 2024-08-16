@@ -2,6 +2,9 @@
 
 Focus Mode is a Chrome extension that helps you stay focused by restricting access to all websites except those on your allowed list. You can easily manage the list of allowed sites and enable or disable focus mode with just a few clicks.
 
+![image](https://github.com/user-attachments/assets/ffef40c2-fd30-4dbc-8b8e-8a33cd3b8dea)
+
+
 ## Features
 
 - **Enable/Disable Focus Mode:** Control when you want to restrict access.
